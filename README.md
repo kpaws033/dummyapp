@@ -1,22 +1,51 @@
-# Docker Node MongoDB Example
+# Sample nodejs application with docker Conatiner
 
-> Simple example of a dockerized Node/Mongo app
 
-![Image](https://i.ibb.co/4Fgt31L/demo.gif)
+# Installation
 
-## Quick Start
+
+```javascript
+
+    // clone the application with git clone
+
+    // then install the npm modules using
+     
+    npm install
+
+
+```
+
+
+# Running the application
+
+
+```javascript
+
+
+    node server.js
+
+
+```
+
+
+# Building docker image
 
 ```bash
-# Run in Docker
-docker-compose up
-# use -d flag to run in background
 
-# Tear down
-docker-compose down
+    docker build -t <imagename:version> .
 
-# To be able to edit files, add volume to compose file
-volumes: ['./:/usr/src/app']
-
-# To re-build
-docker-compose build
 ```
+
+
+
+# Running docker container
+
+
+```bash
+
+    // 9005 port is given since the docker file contains 9005 port
+    docker run -it -d -p <outside-port-of-your-choice>:9005 <imagename:version>
+
+```
+
+
